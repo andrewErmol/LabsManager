@@ -18,35 +18,35 @@ namespace LabsManager.API.Controllers
 
         private readonly Services.PDF.LabPdfWriter _pdfWriter;
 
-        public LabTemplatesController(Services.PDF.LabPdfWriter pdfWriter)
-        {
-            _pdfWriter = pdfWriter;
-        }
+        //public LabTemplatesController(Services.PDF.LabPdfWriter pdfWriter)
+        //{
+        //    _pdfWriter = pdfWriter;
+        //}
 
-        [HttpPost]
-        public IActionResult CreateDocument(string filename)
-        {
-            LabTemplate labTemplate = new LabTemplate
-            {
-                Number = 1,
-                Theme = "Статические характеристики датчиков тока и напряжения",
-                TeacherFullName = "Ковалев А.В.",
-                StudentFullName = "Ермоленко А.А.",
-                StudentGroup = "ПЭ-31",
-                Purpose = "1.Изучить принцип работы датчиков тока и напряжения\n" +
-                    "2.Исследовать статические характеристики датчиков тока и напряжения"
-            };
+        //[HttpPost]
+        //public IActionResult CreateDocument(string filename)
+        //{
+        //    LabTemplate labTemplate = new LabTemplate
+        //    {
+        //        Number = 1,
+        //        Theme = "Статические характеристики датчиков тока и напряжения",
+        //        TeacherFullName = "Ковалев А.В.",
+        //        StudentFullName = "Ермоленко А.А.",
+        //        StudentGroup = "ПЭ-31",
+        //        Purpose = "1.Изучить принцип работы датчиков тока и напряжения\n" +
+        //            "2.Исследовать статические характеристики датчиков тока и напряжения"
+        //    };
 
-            _pdfWriter.CreateFile(_filepath + $"/{filename}.pdf", _fontpath, labTemplate);
+        //    _pdfWriter.CreateFile(_filepath + $"/{filename}.pdf", _fontpath, labTemplate);
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        [HttpDelete]
-        public IActionResult DeleteDocument(string filename)
-        {
+        //[HttpDelete]
+        //public IActionResult DeleteDocument(string filename)
+        //{
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
     }
 }
