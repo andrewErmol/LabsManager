@@ -2,6 +2,7 @@
 using iTextSharp.text.pdf;
 using LabsManager.Domain;
 using LabsManager.Domain.Models;
+using System.Reflection.Metadata;
 using System.Text;
 
 namespace LabsManager.API.Services.PDF
